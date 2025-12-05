@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio website showcasing skills, projects, and achievements">
+    <title>Nolan Vo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Nolan Vo</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- TO CUSTOMIZE: Update your name, title, and introduction below -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Nolan Vo</span></h1>
+                <h2 class="hero-subtitle">Associate AI Engineer | Recent CS Graduate</h2>
+                <p class="hero-description">
+                    Recent Computer Science graduate from HCMUT Honor Program, passionate about AI research 
+                    and data-driven solutions. Specializing in Natural Language Processing, Agentic Workflows, 
+                    and Machine Learning to develop innovative applications that address real-world challenges.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- TO CUSTOMIZE: Replace with your background, experience, and interests -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm Nhan Vo Ngoc Thanh (Nolan Vo), a recent graduate from the Honor Program in 
+                        Computer Science at Ho Chi Minh City University of Technology with a GPA of 3.7/4.0. 
+                        Currently working as an Associate AI Engineer at FPT Software, I'm passionate about 
+                        continual learning and leveraging AI to solve real-world problems.
+                    </p>
+                    <p>
+                        My expertise spans Natural Language Processing, Agentic Workflows, Machine Learning, 
+                        and Data Mining. I've published research on knowledge graph reasoning at IEEE Big Data 
+                        Conference 2025 and have hands-on experience with LangChain, LangGraph, LlamaIndex, 
+                        PyTorch, and various AI frameworks. I specialize in building RAG pipelines, agentic 
+                        systems, and end-to-end ML solutions.
+                    </p>
+                    <p>
+                        My objective is to leverage my skills in AI research and data-driven solutions to develop 
+                        innovative applications that address real-world challenges, ultimately contributing to 
+                        societal improvement and meaningful impact. I'm particularly interested in agentic workflows 
+                        and advanced NLP applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- TO CUSTOMIZE: Add, remove, or modify skills as needed -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- AI & Machine Learning -->
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">PyTorch</div>
+                <div class="skill-badge">Machine Learning</div>
+                <div class="skill-badge">Deep Learning</div>
+                <div class="skill-badge">Data Mining</div>
+                <div class="skill-badge">NLP</div>
+                
+                <!-- Agentic & RAG Systems -->
+                <div class="skill-badge">LangChain</div>
+                <div class="skill-badge">LangGraph</div>
+                <div class="skill-badge">LlamaIndex</div>
+                <div class="skill-badge">RAG Systems</div>
+                <div class="skill-badge">Agentic Workflows</div>
+                <div class="skill-badge">LlamaParse</div>
+                
+                <!-- Data & Backend -->
+                <div class="skill-badge">FastAPI</div>
+                <div class="skill-badge">PostgreSQL</div>
+                <div class="skill-badge">PGVector</div>
+                <div class="skill-badge">SQLAlchemy</div>
+                <div class="skill-badge">PySpark</div>
+                <div class="skill-badge">Java</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- TO CUSTOMIZE: Update with your actual projects, descriptions, and GitHub links -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">C99 - Agentic Report System</h3>
+                    <p class="project-description">
+                        AI-enhanced reporting web app that queries and visualizes data in real time, enabling users 
+                        to interact with dashboards through natural-language insights. Implemented report-level agent 
+                        with rule-based anomaly detection.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">🎮</div>
+                    <h3 class="project-title">Chaos Age - Real-time Strategy Game</h3>
+                    <p class="project-description">
+                        Tactical strategy game (Clash of Clans style) where players build bases, train troops, and attack 
+                        others. Implemented A* pathfinding, opponent matching, training system (client), and building/ 
+                        upgrading system (server) with reliable match synchronization.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Cocos2d-JS</span>
+                        <span class="tag">Client-Server</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View Showcase →
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">🧠</div>
+                    <h3 class="project-title">Hyper-relational Knowledge Graph Reasoning</h3>
+                    <p class="project-description">
+                        Designed and evaluated Attentive-HINGE, an attention-based model for improved multi-hop QA 
+                        over complex knowledge graphs. Research accepted at IEEE Big Data Conference 2025. Enhanced 
+                        link prediction for Vietnamese educational knowledge graphs.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Knowledge Graph</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">📝</div>
+                    <h3 class="project-title">Invoice & Purchase Order Automation</h3>
+                    <p class="project-description">
+                        Created email parsers for extracting Invoice and Purchase Orders data, reducing manual effort. 
+                        Designed similarity search features for matching items between client-provided data and 
+                        company inventory using LlamaParse and PostgreSQL.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">LlamaParse</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-icon">⚙️</div>
+                    <h3 class="project-title">AISync Workflow Framework</h3>
+                    <p class="project-description">
+                        Developed modular components to process documents and queries with high efficiency. 
+                        Implemented document memory module and used LangFuse for real-time monitoring and debugging. 
+                        Built with FastAPI and LangGraph for async execution.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">LangFuse</span>
+                        <span class="tag">FastAPI</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-icon">🚗</div>
+                    <h3 class="project-title">Traffic Light and Sign Detection</h3>
+                    <p class="project-description">
+                        Autonomous driving component focusing on lane detection and traffic light recognition in 
+                        Gazebo simulator before ROS deployment. Conducted data processing and model training with 
+                        YOLOv5 to perform traffic sign detection.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">YOLOv5</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Python</span>
+                    </div>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="project-link">
+                        View on GitHub →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <!-- TO CUSTOMIZE: Add your real achievements, awards, certifications -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-grid">
+                <!-- Achievement 1 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3 class="achievement-title">Student of 5 Merits Award</h3>
+                    <p class="achievement-org">Vietnam National University, Ho Chi Minh City</p>
+                    <p class="achievement-description">
+                        Recognized with the prestigious Student of 5 Merits Award in December 2025, honoring 
+                        excellence across academic achievement, ethics, physical fitness, community service, 
+                        and cultural activities.
+                    </p>
+                </div>
+
+                <!-- Achievement 2 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">📚</div>
+                    <h3 class="achievement-title">IEEE Big Data 2025 Publication</h3>
+                    <p class="achievement-org">KGBigData Workshop at IEEE Big Data Conference</p>
+                    <p class="achievement-description">
+                        Published paper: "Enhancing Link Prediction with Attentive-HINGE: A Vietnamese Case Study 
+                        in Educational Knowledge Graph" at IEEE Big Data 2025. Camera-ready submission accepted 
+                        in December 2025.
+                    </p>
+                </div>
+
+                <!-- Achievement 3 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <h3 class="achievement-title">EVN Scholarship</h3>
+                    <p class="achievement-org">Ho Chi Minh University of Technology</p>
+                    <p class="achievement-description">
+                        Awarded by Vietnam Electricity (EVN) in July 2025 for academic excellence and strong 
+                        ethics, recognizing outstanding performance in computer science studies.
+                    </p>
+                </div>
+
+                <!-- Achievement 4 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3 class="achievement-title">Outstanding Student 2023-2024</h3>
+                    <p class="achievement-org">Ho Chi Minh University of Technology</p>
+                    <p class="achievement-description">
+                        Recognized as Outstanding Student for the academic year 2023-2024 in November 2024, 
+                        demonstrating exceptional performance in the Computer Science Honor Program.
+                    </p>
+                </div>
+
+                <!-- Achievement 5 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏅</div>
+                    <h3 class="achievement-title">University Merit-Based Scholarship</h3>
+                    <p class="achievement-org">Ho Chi Minh University of Technology</p>
+                    <p class="achievement-description">
+                        Awarded merit-based scholarship in December 2023 for academic excellence, ranking in 
+                        the top 10% of the Computer Science faculty at HCMUT.
+                    </p>
+                </div>
+
+                <!-- Achievement 6 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎖️</div>
+                    <h3 class="achievement-title">Excellent Student 2022-2023</h3>
+                    <p class="achievement-org">Ho Chi Minh University of Technology</p>
+                    <p class="achievement-description">
+                        Recognized as Excellent Student for the academic year 2022-2023 in November 2023, 
+                        demonstrating consistent high performance in academic coursework and research activities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <!-- TO CUSTOMIZE: Update with your actual email and social media links -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p class="contact-description">
+                    I'm always open to discussing new projects, creative ideas, or opportunities 
+                    to be part of your vision. Feel free to reach out!
+                </p>
+                <div class="contact-methods">
+                    <a href="mailto:nhannhan888888@gmail.com" class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">nhannhan888888@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/nhan2003h" target="_blank" class="contact-item">
+                        <span class="contact-icon">💻</span>
+                        <span class="contact-text">GitHub: nhan2003h</span>
+                    </a>
+                    <a href="https://linkedin.com/in/VNTNhan" target="_blank" class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <span class="contact-text">LinkedIn: VNTNhan</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nolan Vo (Nhan Vo Ngoc Thanh). All rights reserved.</p>
+            <p class="footer-note">Built with ❤️ using HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

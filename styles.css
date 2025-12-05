@@ -1,0 +1,688 @@
+/* ===========================
+   CSS Variables for Easy Customization
+   =========================== */
+:root {
+    /* Color Palette - Customize these to change the entire theme */
+    --primary-color: #4A90E2;
+    --primary-dark: #357ABD;
+    --secondary-color: #6C757D;
+    --accent-color: #5C9FD6;
+    --background-light: #F8F9FA;
+    --background-white: #FFFFFF;
+    --text-dark: #2C3E50;
+    --text-medium: #5A6C7D;
+    --text-light: #7F8C8D;
+    --border-color: #E1E8ED;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    
+    /* Typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+}
+
+/* ===========================
+   Reset & Base Styles
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    line-height: var(--line-height-base);
+    background-color: var(--background-white);
+}
+
+/* ===========================
+   Typography
+   =========================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-medium);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+/* ===========================
+   Container & Layout
+   =========================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+/* ===========================
+   Navigation Bar
+   =========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-white);
+    box-shadow: 0 2px 10px var(--shadow-light);
+    z-index: 1000;
+    transition: all var(--transition-base);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+.nav-link {
+    color: var(--text-medium);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    margin: 3px 0;
+    transition: all var(--transition-fast);
+    border-radius: 2px;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--background-light) 0%, #E8F4F8 100%);
+    margin-top: 60px;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s ease;
+}
+
+.highlight {
+    color: var(--primary-color);
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease 0.6s backwards;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Section Titles
+   =========================== */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-dark);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* ===========================
+   About Section
+   =========================== */
+.about {
+    background: var(--background-white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-medium);
+}
+
+/* ===========================
+   Skills Section
+   =========================== */
+.skills {
+    background: var(--background-light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-sm);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-badge {
+    background: var(--background-white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-dark);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: all var(--transition-base);
+    cursor: default;
+}
+
+.skill-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ===========================
+   Projects Section
+   =========================== */
+.projects {
+    background: var(--background-white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.project-card {
+    background: var(--background-white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px var(--shadow-medium);
+    border-color: var(--primary-color);
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-title {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.4rem;
+}
+
+.project-description {
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+    line-height: 1.7;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.tag {
+    background: var(--background-light);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.project-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--primary-dark);
+    transform: translateX(4px);
+}
+
+/* ===========================
+   Achievements Section
+   =========================== */
+.achievements {
+    background: var(--background-light);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.achievement-card {
+    background: var(--background-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: all var(--transition-base);
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px var(--shadow-medium);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.achievement-title {
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.3rem;
+}
+
+.achievement-org {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.achievement-description {
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+/* ===========================
+   Contact Section
+   =========================== */
+.contact {
+    background: var(--background-white);
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-medium);
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--background-light);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+}
+
+.contact-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(8px);
+    border-color: var(--primary-color);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+}
+
+.contact-text {
+    font-weight: 600;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+    background: var(--text-dark);
+    color: var(--background-light);
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+.footer p {
+    margin-bottom: var(--spacing-xs);
+    color: var(--background-light);
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===========================
+   Animations
+   =========================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive Design - Tablet
+   =========================== */
+@media (max-width: 768px) {
+    /* Typography adjustments */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: var(--background-white);
+        width: 100%;
+        text-align: center;
+        transition: left var(--transition-base);
+        box-shadow: 0 10px 27px var(--shadow-medium);
+        padding: var(--spacing-md) 0;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Sections */
+    section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    /* Grids */
+    .projects-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--spacing-xs);
+    }
+    
+    /* Buttons */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* ===========================
+   Responsive Design - Mobile
+   =========================== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 14px;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-card,
+    .achievement-card {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    .navbar,
+    .mobile-menu-toggle,
+    .hero-buttons {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
