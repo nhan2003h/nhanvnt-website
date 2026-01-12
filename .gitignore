@@ -1,2 +1,4 @@
 # ìgnore all PDF files
 *.pdf
+.github/
+.gemini/
