@@ -2,3 +2,4 @@
 *.pdf
 .github/
 .gemini/
+.env
